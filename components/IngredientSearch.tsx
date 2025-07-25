@@ -71,10 +71,7 @@ export default function IngredientSearch({ onSearch }: Props) {
 
   return (
     <div
-      className="relative flex flex-col items-start gap-2 mb-6 w-full max-w-md p-6 rounded-2xl"
-      style={{
-        background: "linear-gradient(135deg, #111 60%, #222 100%)",
-      }}
+      className="relative flex flex-col items-start gap-2 mb-6 w-full max-w-md"
     >
       <div className="flex w-full gap-2">
         <Input
@@ -85,11 +82,10 @@ export default function IngredientSearch({ onSearch }: Props) {
           onKeyDown={(e) => {
             if (e.key === "Enter") handleSearch();
           }}
-          className="bg-[#18181b] text-white placeholder-gray-400 border-gray-700 focus:border-blue-500 focus:ring-blue-500"
+          className="text-white placeholder-gray-400 border-gray-700 focus:border-blue-500 focus:ring-blue-500 rounded-full"
         />
         <Button
-          className="font-semibold rounded-full px-6 py-2 shadow-lg bg-gradient-to-r from-indigo-700 via-purple-800 to-gray-900 text-white transition-all duration-200 hover:scale-105 hover:shadow-xl border-0"
-          style={{ background: "linear-gradient(90deg, #312e81 0%, #6d28d9 100%)", color: "#fff" }}
+          className="font-semibold rounded-full px-6 py-2 shadow-lg text-white transition-all duration-200 hover:scale-105 hover:shadow-xl border-0 bg-blue-600 hover:bg-blue-700"
           onClick={handleSearch}
         >
           {loading ? "Loading..." : "Search"}
